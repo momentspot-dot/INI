@@ -1,0 +1,69 @@
+// Edit project information here. Empty image arrays mean that photos have not yet been supplied.
+const projects = [
+ {title:"MOMENTIS STUDIO",dates:"2022.01.20 — 2022.12.01",tags:["콘텐츠 제작","촬영","기획","디렉팅","인테리어"],summary:"프로필 촬영 스튜디오 제작 및 운영 프로젝트",description:"스튜디오 인테리어부터 각종 소품과 장비 구성, 촬영 공간 및 개인 사무실 마련까지 진행했습니다. 프로필 촬영과 제품 촬영, 마케팅 협업 등 다양한 활동을 수행했습니다.",roles:["스튜디오 구성 및 운영","촬영 공간 기획","프로필 및 제품 촬영","마케팅 협업"],good:[],improve:[],images:[]},
+ {title:"MOMEN SPOT",dates:"2019.07",tags:["콘텐츠 제작","촬영","기획","디렉팅","인테리어"],summary:"촬영 콘셉트 기획 및 고객 프로젝트 운영",description:"촬영 콘셉트, 운영 콘셉트, 색감 등 스튜디오의 다양한 부분을 제작하고, 고객 유치를 위한 미팅을 진행했습니다.",roles:["고객 미팅","촬영 콘셉트 기획","운영 및 디렉팅"],good:[],improve:[],images:[]},
+ {title:"롯데백화점 제품 촬영팀",dates:"2023.03.01 — 2023.05.10",tags:["촬영","기획"],summary:"백화점 제품 촬영실 소속 제품 촬영",description:"롯데백화점 제품 촬영실에 소속되어 제품 촬영 작업을 진행했습니다.",roles:["제품 촬영","현장 디렉팅"],good:[],improve:[],images:[]},
+ {title:"아이돌 X:IN 촬영",dates:"2023.02.01 — 2023.03.01",tags:["촬영","기획","디렉팅"],summary:"아이돌 X:IN 화보 촬영",description:"아이돌 X:IN의 화보 촬영 프로젝트입니다.",roles:["촬영","연출","디렉팅"],good:[],improve:[],images:[]},
+ {title:"유튜버 MIU 프로필 촬영",dates:"2022.10.06 — 2022.10.20",tags:["촬영","기획","디렉팅"],summary:"새로운 이미지 전환을 위한 키치·하이틴 프로필 촬영",description:"댄서에서 유튜브, 틱톡 활동으로 전환하기 위해 기존의 이미지와 정반대되는 키치·하이틴 무드를 바탕으로 프로필 촬영을 진행했습니다.",roles:["촬영","연출","디렉팅"],good:["기존 이미지를 탈피하기 위해 의상과 메이크업을 세밀하게 디렉팅했습니다.","피사체의 고유한 장점을 살리면서 새로운 매력의 이미지를 만들었습니다."],improve:["스태프 구성을 보강했다면 더 풍부한 사진 구성이 가능했을 것입니다."],images:[]},
+ {title:"Team percent",dates:"기간 확인 필요",tags:["촬영","기획"],summary:"댄서 및 아티스트 프로필, 단체 사진 작업",description:"안무 제작, 디렉팅, 백업댄서 등 다양한 춤 분야에서 활동하는 댄서들의 프로필 및 단체 사진을 촬영했습니다.",roles:["촬영","연출","디렉팅"],good:[],improve:[],images:[]}
+];
+
+// null levels are intentional: ask the portfolio owner to verify skill ratings.
+const skillCategories=[
+ {title:"Photography & Design",items:[{name:"Adobe Photoshop",level:null,note:"리터칭 · 합성 · 색 보정"},{name:"Studio Photography",level:null,note:"인물 · 제품 · 프로필 촬영"}]},
+ {title:"Video Editing",items:[{name:"Adobe Premiere Pro",level:null,note:"영상 편집"},{name:"Adobe After Effects",level:null,note:"영상 효과 · 모션"}]},
+ {title:"AI & Creative Tools",items:[{name:"Generative AI",level:null,note:"사용 도구 및 숙련도 확인 후 반영"},{name:"AI-assisted Editing",level:null,note:"AI 활용 편집 경험 확인 후 반영"}]},
+ {title:"Collaboration & Office",items:[{name:"Notion",level:null,note:"프로젝트 및 자료 정리"},{name:"Word · Excel · PowerPoint",level:null,note:"문서 · 데이터 · 발표 자료"}]}
+];
+// Replace with a publicly shareable MYBOX URL once it is verified.
+const myboxUrl="";
+const galleryPhotos=[]; // e.g. [{src:"./images/portrait-01.jpg",alt:"스튜디오 프로필 사진"}]
+const grid=document.getElementById("projectGrid");
+const dialog=document.getElementById("projectDialog");
+const content=document.getElementById("dialogContent");
+const closeButton=document.getElementById("closeDialog");
+const escapeHTML=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const tags=arr=>arr.map(s=>'<span class="tag">'+escapeHTML(s)+'</span>').join("");
+const bullets=arr=>arr.length?'<ul>'+arr.map(x=>'<li>'+escapeHTML(x)+'</li>').join("")+'</ul>':'<p class="dialog-empty">추후 업데이트 예정</p>';
+let previousFocus=null;
+projects.forEach((p,i)=>{
+ const b=document.createElement("button");b.type="button";b.className="project-card";b.setAttribute("aria-haspopup","dialog");
+ b.innerHTML='<div class="project-top"><span class="project-num">PROJECT '+String(i+1).padStart(2,"0")+'</span><span class="project-arrow" aria-hidden="true">↗</span></div><h3>'+escapeHTML(p.title)+'</h3><p class="project-summary">'+escapeHTML(p.summary)+'</p><div class="project-bottom"><div class="tags">'+tags(p.tags)+'</div><span class="date">'+escapeHTML(p.dates)+'</span></div>';
+ b.addEventListener("click",()=>openProject(p));grid.appendChild(b);
+});
+function openProject(p){
+ previousFocus=document.activeElement;
+ const images=p.images?.length?p.images.map(img=>'<img class="dialog-image" src="'+escapeHTML(img.src)+'" alt="'+escapeHTML(img.alt||p.title)+'" loading="lazy">').join(""):'<div class="dialog-hero">프로젝트 이미지 업데이트 예정</div>';
+ content.innerHTML='<div class="dialog-head"><span class="eyebrow">PROJECT DETAIL</span><h2 id="dialogTitle">'+escapeHTML(p.title)+'</h2><div class="tags">'+tags(p.tags)+'</div></div>'+
+ '<dl class="dialog-meta"><dt>작업 영역</dt><dd>'+escapeHTML(p.tags.join(" · "))+'</dd><dt>작업 기간</dt><dd>'+escapeHTML(p.dates)+'</dd><dt>주요 역할</dt><dd>'+escapeHTML(p.roles.join(" · "))+'</dd></dl>'+
+ images+'<section class="dialog-section"><h3>프로젝트 소개</h3><p>'+escapeHTML(p.description)+'</p></section>'+
+ '<section class="dialog-section"><h3>역할</h3>'+bullets(p.roles)+'</section>'+
+ '<section class="dialog-section dialog-learned"><h3>LESSONS LEARNED</h3><h4>좋았던 점</h4>'+bullets(p.good)+'<h4>아쉬웠던 점</h4>'+bullets(p.improve)+'</section>';
+ dialog.showModal();closeButton.focus();
+}
+closeButton.addEventListener("click",()=>dialog.close());
+dialog.addEventListener("click",event=>{if(event.target===dialog)dialog.close()});
+dialog.addEventListener("close",()=>previousFocus?.focus());
+const skills=document.getElementById("skillGroups");
+skillCategories.forEach(category=>{
+ const section=document.createElement("section");section.className="skill-group";
+ const heading=document.createElement("h3");heading.textContent=category.title;section.appendChild(heading);
+ category.items.forEach(item=>{
+  const block=document.createElement("div");block.className="skill-item";
+  const level=item.level===null?'<span class="level pending">평가 예정</span>':'<span class="level" aria-label="숙련도 '+item.level+'/5">'+Array.from({length:5},(_,i)=>'<span class="level-square'+(i<item.level?' filled':'')+'"></span>').join("")+'</span>';
+  block.innerHTML='<div class="skill-line"><span class="skill-name">'+escapeHTML(item.name)+'</span>'+level+'</div><span class="skill-note">'+escapeHTML(item.note)+'</span>';
+  section.appendChild(block);
+ });skills.appendChild(section);
+});
+const gallery=document.getElementById("galleryGrid");
+for(let i=0;i<Math.max(galleryPhotos.length,3);i++){
+ const tile=document.createElement("div");tile.className="gallery-placeholder";
+ const photo=galleryPhotos[i];
+ if(photo){const img=document.createElement("img");img.src=photo.src;img.alt=photo.alt;img.loading="lazy";tile.appendChild(img)}
+ else tile.innerHTML='<span class="symbol" aria-hidden="true">0'+(i+1)+'</span><span class="gallery-label">IMAGE TO BE ADDED</span>';
+ gallery.appendChild(tile);
+}
+if(myboxUrl&&/^https:\/\//.test(myboxUrl)){
+ const old=document.getElementById("archiveAction"),a=document.createElement("a");a.id=old.id;a.className="archive-action enabled";a.href=myboxUrl;a.rel="noopener noreferrer";a.target="_blank";a.textContent="VIEW FULL ARCHIVE ↗";old.replaceWith(a);
+}
+document.getElementById("copyrightYear").textContent=new Date().getFullYear();
