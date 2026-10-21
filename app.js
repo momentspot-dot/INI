@@ -100,8 +100,12 @@ const skillCategories=[
  {title:"Collaboration & Office",items:[{name:"Notion",level:null,note:"프로젝트 및 자료 정리"},{name:"Word · Excel · PowerPoint",level:null,note:"문서 · 데이터 · 발표 자료"}]}
 ];
 // Replace with a publicly shareable MYBOX URL once it is verified.
-const myboxUrl="";
-const galleryPhotos=[]; // e.g. [{src:"./images/portrait-01.jpg",alt:"스튜디오 프로필 사진"}]
+const myboxUrl="https://naver.me/Fl2bHOua";
+const galleryPhotos=[
+ {src:"./images/gallery-portrait.jpg",alt:"얼굴에 화려한 페인트를 바르고 붓을 문 인물의 밝은 스튜디오 프로필 촬영",category:"01 / PORTRAIT",label:"Portrait",detail:"프로필 · 스튜디오"},
+ {src:"./images/gallery-wedding.jpg",alt:"물가에서 웨딩드레스를 입은 커플이 등장하는 파스텔 톤 웨딩 인비테이션 이미지",category:"02 / WEDDING",label:"Wedding",detail:"웨딩 · 무드"},
+ {src:"./images/gallery-concept.jpg",alt:"크리스마스 테마의 빨간 의상을 입은 멤버들 단체 콘셉트 화보",category:"03 / CONCEPT",label:"Concept",detail:"콘셉트 · 단체 촬영"}
+];
 const grid=document.getElementById("projectGrid");
 const dialog=document.getElementById("projectDialog");
 const content=document.getElementById("dialogContent");
@@ -154,13 +158,18 @@ skillCategories.forEach(category=>{
  });skills.appendChild(section);
 });
 const gallery=document.getElementById("galleryGrid");
-for(let i=0;i<Math.max(galleryPhotos.length,3);i++){
- const tile=document.createElement("div");tile.className="gallery-placeholder";
- const photo=galleryPhotos[i];
- if(photo){const img=document.createElement("img");img.src=photo.src;img.alt=photo.alt;img.loading="lazy";tile.appendChild(img)}
- else tile.innerHTML='<span class="symbol" aria-hidden="true">0'+(i+1)+'</span><span class="gallery-label">IMAGE TO BE ADDED</span>';
- gallery.appendChild(tile);
-}
+galleryPhotos.forEach((photo,index)=>{
+ const fig=document.createElement("figure");fig.className="gallery-card";
+ const anchor=document.createElement("a");anchor.className="gallery-image-link";anchor.href=photo.src;anchor.target="_blank";anchor.rel="noopener noreferrer";anchor.setAttribute("aria-label",photo.label+" 촬영 사진 크게 보기");
+ const img=document.createElement("img");img.src=photo.src;img.alt=photo.alt;img.loading="lazy";img.decoding="async";
+ const fallback=document.createElement("div");fallback.className="gallery-unavailable";fallback.textContent="이미지 업로드 예정";fallback.hidden=true;
+ img.addEventListener("error",()=>{img.hidden=true;fallback.hidden=false;anchor.removeAttribute("href");anchor.setAttribute("aria-disabled","true")},{once:true});
+ anchor.appendChild(img);anchor.appendChild(fallback);
+ const cap=document.createElement("figcaption");cap.className="gallery-caption";
+ const left=document.createElement("span");left.textContent=photo.label;
+ const right=document.createElement("span");right.textContent=photo.detail;
+ cap.append(left,right);fig.append(anchor,cap);gallery.appendChild(fig);
+});
 if(myboxUrl&&/^https:\/\//.test(myboxUrl)){
  const old=document.getElementById("archiveAction"),a=document.createElement("a");a.id=old.id;a.className="archive-action enabled";a.href=myboxUrl;a.rel="noopener noreferrer";a.target="_blank";a.textContent="VIEW FULL ARCHIVE ↗";old.replaceWith(a);
 }
