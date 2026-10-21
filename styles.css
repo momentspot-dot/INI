@@ -153,3 +153,6 @@
  .gallery-card:nth-child(3) .gallery-image-link img{object-position:center 50%}
 }
 @media(prefers-reduced-motion:reduce){.gallery-image-link img,.social-link{transition:none}}
+
+/* Subtle numeric skill ratings alongside existing five-step squares */
+.level-value{font-size:10px;line-height:1;min-width:24px;text-align:right;margin-left:5px;color:#8d939c;font-weight:500;font-variant-numeric:tabular-nums}
