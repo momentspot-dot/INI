@@ -110,7 +110,7 @@ const skillCategories=[
   {name:"Photography",level:4,note:"인물 · 웨딩 · 제품 촬영 및 조명·현장 디렉팅"}
  ]},
  {title:"Video Editing",items:[
-  {name:"Adobe Premiere Pro",level:3,note:"영상 컷 편집 · 기본 후반 작업"}
+  {name:"Adobe Premiere Pro",level:2,note:"영상 컷 편집 · 기본 후반 작업"}
  ]},
  {title:"AI & Creative Tools",items:[
   {name:"ChatGPT",level:4,note:"아이디어 정리 · 기획 · 문서 및 웹 제작 보조"},
