@@ -21,7 +21,19 @@ const projects = [
   {src:"./images/momentis-studio-05.jpg",alt:"붉은색과 푸른색 조명으로 연출한 아티스트 화보",caption:"EDITORIAL / CREATIVE LIGHTING"},
   {src:"./images/momentis-studio-06.jpg",alt:"넓은 여백이 있는 흑백 남성 프로필",caption:"PORTRAIT / MINIMAL"}
  ]},
- {title:"MOMEN SPOT",dates:"2019.07",tags:["콘텐츠 제작","촬영","기획","디렉팅","인테리어"],summary:"촬영 콘셉트 기획 및 고객 프로젝트 운영",description:"촬영 콘셉트, 운영 콘셉트, 색감 등 스튜디오의 다양한 부분을 제작하고, 고객 유치를 위한 미팅을 진행했습니다.",roles:["고객 미팅","촬영 콘셉트 기획","운영 및 디렉팅"],good:[],improve:[],images:[]},
+ {title:"MOMEN SPOT",brand:"모먼트스팟",dates:"2019.07 — 2024.03",tags:["콘텐츠 제작","촬영","기획","디렉팅","인테리어"],summary:"웨딩 스냅 브랜드의 촬영 콘셉트·색감 구축과 고객 촬영 운영",description:"모먼트스팟은 촬영 콘셉트와 운영 방식, 색감부터 고객 커뮤니케이션까지 직접 구축·운영한 본식 스냅 브랜드입니다.",introPoints:[
+ "브랜드의 촬영 콘셉트, 운영 방향, 색감 등 시각적 정체성을 기획하고 지속적으로 발전시켰습니다.",
+ "고객 유치를 위한 상담과 미팅을 진행하고, 본식 현장 촬영 및 사진 보정을 담당했습니다."
+ ],roles:["고객 상담 및 사전 미팅","본식 스냅 촬영","사진 셀렉 및 리터칭·색보정","브랜드 촬영 콘셉트 및 색감 기획"],good:[
+ "적은 초기 자본으로 시작했지만, 작업물과 고객 후기를 기반으로 중가형 웨딩 스냅 브랜드로 입소문을 확보했습니다.",
+ "촬영 구도, 연출 및 보정 스타일을 꾸준히 실험하며 브랜드만의 시그니처 이미지를 다양하게 개발했습니다.",
+ "상대적으로 젊은 촬영자의 시각을 강점으로 활용해 기존 웨딩 스냅과 차별화된 감각의 사진을 제안했습니다."
+ ],improve:[
+ "초기 자본과 장비 예산이 제한되어 다양한 렌즈를 활용한 실험을 충분히 시도하지 못했습니다.",
+ "빈티지 렌즈 특유의 보케를 강조한 연출이나 어안렌즈를 활용한 촬영 등 기획했던 일부 아이디어를 실제 작업으로 구현하지 못했습니다."
+ ],images:[
+  {src:"./images/momen-spot-instagram.jpg",alt:"모먼트스팟 인스타그램 프로필과 웨딩 스냅 작업 아카이브",caption:"MOMEN SPOT / WEDDING PHOTOGRAPHY ARCHIVE"}
+ ]},
  {title:"롯데백화점 제품 촬영팀",dates:"2023.03.01 — 2023.05.10",tags:["촬영","기획"],summary:"백화점 제품 촬영실 소속 제품 촬영",description:"롯데백화점 제품 촬영실에 소속되어 제품 촬영 작업을 진행했습니다.",roles:["제품 촬영","현장 디렉팅"],good:[],improve:[],images:[]},
  {title:"아이돌 X:IN 촬영",dates:"2023.02.01 — 2023.03.01",tags:["촬영","기획","디렉팅"],summary:"아이돌 X:IN 화보 촬영",description:"아이돌 X:IN의 화보 촬영 프로젝트입니다.",roles:["촬영","연출","디렉팅"],good:[],improve:[],images:[]},
  {title:"유튜버 MIU 프로필 촬영",dates:"2022.10.06 — 2022.10.20",tags:["촬영","기획","디렉팅"],summary:"새로운 이미지 전환을 위한 키치·하이틴 프로필 촬영",description:"댄서에서 유튜브, 틱톡 활동으로 전환하기 위해 기존의 이미지와 정반대되는 키치·하이틴 무드를 바탕으로 프로필 촬영을 진행했습니다.",roles:["촬영","연출","디렉팅"],good:["기존 이미지를 탈피하기 위해 의상과 메이크업을 세밀하게 디렉팅했습니다.","피사체의 고유한 장점을 살리면서 새로운 매력의 이미지를 만들었습니다."],improve:["스태프 구성을 보강했다면 더 풍부한 사진 구성이 가능했을 것입니다."],images:[]},
@@ -48,7 +60,7 @@ const bullets=arr=>arr.length?'<ul>'+arr.map(x=>'<li>'+escapeHTML(x)+'</li>').jo
 let previousFocus=null;
 projects.forEach((p,i)=>{
  const b=document.createElement("button");b.type="button";b.className="project-card";b.setAttribute("aria-haspopup","dialog");
- b.innerHTML='<div class="project-top"><span class="project-num">PROJECT '+String(i+1).padStart(2,"0")+'</span><span class="project-arrow" aria-hidden="true">↗</span></div><h3>'+escapeHTML(p.title)+'</h3><p class="project-summary">'+escapeHTML(p.summary)+'</p><div class="project-bottom"><div class="tags">'+tags(p.tags)+'</div><span class="date">'+escapeHTML(p.dates)+'</span></div>';
+ b.innerHTML='<div class="project-top"><span class="project-num">PROJECT '+String(i+1).padStart(2,"0")+'</span><span class="project-arrow" aria-hidden="true">↗</span></div><h3>'+escapeHTML(p.title)+'</h3><p class="project-summary">'+escapeHTML(p.summary)+'</p><div class="project-bottom"><div class="project-meta-line"><span class="project-meta-label">작업 영역</span><div class="tags">'+tags(p.tags)+'</div></div><div class="project-meta-line"><span class="project-meta-label">작업 기간</span><span class="date">'+escapeHTML(p.dates)+'</span></div></div>';
  b.addEventListener("click",()=>openProject(p));grid.appendChild(b);
 });
 function openProject(p){
@@ -56,7 +68,7 @@ function openProject(p){
  const intro=p.introPoints?.length?'<ul class="project-intro-points">'+p.introPoints.map(t=>'<li>'+escapeHTML(t)+'</li>').join("")+'</ul>':'<p>'+escapeHTML(p.description)+'</p>';
  const images=p.images?.length?'<section class="dialog-section project-photo-section"><h3>작업 이미지 <span class="image-count">'+p.images.length.toString().padStart(2,"0")+' IMAGES</span></h3><p class="photo-upload-status">촬영 이미지 업로드 준비 중</p><div class="project-photo-grid">'+p.images.map((img,i)=>'<figure class="project-photo'+(i===0?' project-photo-wide':'')+'" style="display:none"><a target="_blank" rel="noopener noreferrer" href="'+escapeHTML(img.src)+'" aria-label="'+escapeHTML(img.alt||p.title)+' 이미지 크게 보기"><img src="'+escapeHTML(img.src)+'" alt="'+escapeHTML(img.alt||p.title)+'"></a><figcaption>'+escapeHTML(img.caption||"")+'</figcaption></figure>').join("")+'</div></section>':'<div class="dialog-hero">프로젝트 이미지 업데이트 예정</div>';
  content.innerHTML='<div class="dialog-head"><span class="eyebrow">PROJECT DETAIL</span><h2 id="dialogTitle">'+escapeHTML(p.title)+'</h2><div class="tags">'+tags(p.tags)+'</div></div>'+
- '<dl class="dialog-meta"><dt>작업 영역</dt><dd>'+escapeHTML(p.tags.join(" · "))+'</dd><dt>작업 기간</dt><dd>'+escapeHTML(p.dates)+'</dd><dt>주요 역할</dt><dd>'+escapeHTML(p.roles.join(" · "))+'</dd></dl>'+
+ '<dl class="dialog-meta"><dt>작업 영역</dt><dd>'+tags(p.tags)+'</dd>'+(p.brand?'<dt>브랜드</dt><dd>'+escapeHTML(p.brand)+'</dd>':'')+'<dt>작업 기간</dt><dd>'+escapeHTML(p.dates)+'</dd>'+(p.contribution?'<dt>기여도</dt><dd>'+escapeHTML(p.contribution)+'</dd>':'')+'<dt>주요 역할</dt><dd>'+escapeHTML(p.roles.join(" · "))+'</dd></dl>'+
  '<section class="dialog-section"><h3>프로젝트 소개</h3>'+intro+'</section>'+
  '<section class="dialog-section"><h3>역할</h3>'+bullets(p.roles)+'</section>'+
  images+
