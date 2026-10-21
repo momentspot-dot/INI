@@ -46,7 +46,7 @@ const projects = [
  ],images:[
   {src:"./images/lotte-department-product-01.jpg",alt:"화이트와 레드 컬러의 운동화를 촬영한 롯데백화점 제품 사진",caption:"PRODUCT PHOTOGRAPHY / FOOTWEAR"}
  ]},
- {title:"아이돌 X:IN 화보 촬영",brand:"X:IN (엑신)",dates:"2023.02.01 — 2023.03.01",tags:["촬영","연출","디렉팅"],summary:"대비되는 두 가지 메인 콘셉트와 멤버별 개성을 담은 아이돌 화보",description:"걸그룹 X:IN의 콘셉트 화보 및 앨범 이미지 촬영 프로젝트입니다. 제한된 촬영 공간 안에서 대비되는 두 개의 메인 콘셉트와 서브 콘셉트를 구현하고, 그룹의 통일된 톤앤매너 안에서 각 멤버의 개성을 표현했습니다.",introPoints:[
+ {title:"아이돌 X:IN 화보 촬영",evidence:true,brand:"X:IN (엑신)",dates:"2023.02.01 — 2023.03.01",tags:["촬영","연출","디렉팅"],summary:"대비되는 두 가지 메인 콘셉트와 멤버별 개성을 담은 아이돌 화보",description:"걸그룹 X:IN의 콘셉트 화보 및 앨범 이미지 촬영 프로젝트입니다. 제한된 촬영 공간 안에서 대비되는 두 개의 메인 콘셉트와 서브 콘셉트를 구현하고, 그룹의 통일된 톤앤매너 안에서 각 멤버의 개성을 표현했습니다.",introPoints:[
  "걸그룹 X:IN의 콘셉트 화보 및 앨범 이미지 촬영을 진행했습니다.",
  "한정된 공간에서 서로 대비되는 두 가지 메인 콘셉트와 다양한 서브 콘셉트를 연출했습니다.",
  "그룹 전체의 비주얼 방향성을 유지하면서 멤버별 개성과 이미지가 드러나도록 촬영·디렉팅했습니다."
@@ -57,10 +57,10 @@ const projects = [
  "현장 소품 준비 과정에서 일부 준비 상태가 계획과 달라 후보정으로 보완했지만, 그 과정에서 후반 작업 시간이 추가로 소요됐습니다.",
  "후보정으로 해결하는 안전한 방향을 택하기보다, 미흡한 소품의 특성을 즉흥적인 연출 기회로 전환해 새로운 결과물을 시도하지 못한 점이 아쉬웠습니다."
  ],images:[
-  {src:"./images/xin-01-press-dark.jpg",alt:"X:IN 다크 콘셉트 단체 화보가 실린 기사 화면",caption:"PRESS / DARK CONCEPT"},
-  {src:"./images/xin-02-press-pastel.jpg",alt:"X:IN 파스텔 색감의 화보와 기사 화면",caption:"PRESS / LIGHT CONCEPT"},
-  {src:"./images/xin-03-official-editorial.jpg",alt:"X:IN 공식 인스타그램에 게시된 멤버별 프로필 화보",caption:"OFFICIAL SNS / MEMBER EDITORIAL"},
-  {src:"./images/xin-04-official-group.jpg",alt:"X:IN 공식 인스타그램에 게시된 그룹 화보",caption:"OFFICIAL SNS / GROUP PORTRAIT"}
+  {src:"./images/xin-01-press-original.jpg",alt:"X:IN 관련 언론 보도 원본 화면 캡처. 기사 제목과 발행 정보, 다크 콘셉트 단체 사진 포함",caption:"언론 보도 01 · 기사 제목 및 보도 화면"},
+  {src:"./images/xin-02-press-original.jpg",alt:"데일리스포츠한국 X:IN 관련 기사 원본 화면 캡처. 기사 내용과 라이트 콘셉트 단체 사진 포함",caption:"언론 보도 02 · 데일리스포츠한국 기사 화면"},
+  {src:"./images/xin-03-official-original.jpg",alt:"X:IN 공식 인스타그램 x.in__official 게시물 원본 화면. 계정명과 멤버별 화보 게시 내역 포함",caption:"공식 SNS 01 · X:IN 공식 계정 게시물"},
+  {src:"./images/xin-04-official-original.jpg",alt:"X:IN 공식 인스타그램 x.in__official 게시물 원본 화면. 계정명과 그룹 화보 게시 내역 포함",caption:"공식 SNS 02 · X:IN 공식 계정 게시물"}
  ]},
  {title:"유튜버 MIU 프로필 촬영",dates:"2022.10.06 — 2022.10.20",tags:["촬영","기획","디렉팅"],summary:"새로운 이미지 전환을 위한 키치·하이틴 프로필 촬영",description:"댄서에서 유튜브, 틱톡 활동으로 전환하기 위해 기존의 이미지와 정반대되는 키치·하이틴 무드를 바탕으로 프로필 촬영을 진행했습니다.",roles:["촬영","연출","디렉팅"],good:["기존 이미지를 탈피하기 위해 의상과 메이크업을 세밀하게 디렉팅했습니다.","피사체의 고유한 장점을 살리면서 새로운 매력의 이미지를 만들었습니다."],improve:["스태프 구성을 보강했다면 더 풍부한 사진 구성이 가능했을 것입니다."],images:[]},
  {title:"Team percent",dates:"기간 확인 필요",tags:["촬영","기획"],summary:"댄서 및 아티스트 프로필, 단체 사진 작업",description:"안무 제작, 디렉팅, 백업댄서 등 다양한 춤 분야에서 활동하는 댄서들의 프로필 및 단체 사진을 촬영했습니다.",roles:["촬영","연출","디렉팅"],good:[],improve:[],images:[]}
@@ -92,7 +92,12 @@ projects.forEach((p,i)=>{
 function openProject(p){
  previousFocus=document.activeElement;
  const intro=p.introPoints?.length?'<ul class="project-intro-points">'+p.introPoints.map(t=>'<li>'+escapeHTML(t)+'</li>').join("")+'</ul>':'<p>'+escapeHTML(p.description)+'</p>';
- const images=p.images?.length?'<section class="dialog-section project-photo-section"><h3>작업 이미지 <span class="image-count">'+p.images.length.toString().padStart(2,"0")+' IMAGES</span></h3><p class="photo-upload-status">촬영 이미지 업로드 준비 중</p><div class="project-photo-grid">'+p.images.map((img,i)=>'<figure class="project-photo'+(i===0?' project-photo-wide':'')+'" style="display:none"><a target="_blank" rel="noopener noreferrer" href="'+escapeHTML(img.src)+'" aria-label="'+escapeHTML(img.alt||p.title)+' 이미지 크게 보기"><img src="'+escapeHTML(img.src)+'" alt="'+escapeHTML(img.alt||p.title)+'"></a><figcaption>'+escapeHTML(img.caption||"")+'</figcaption></figure>').join("")+'</div></section>':'<div class="dialog-hero">프로젝트 이미지 업데이트 예정</div>';
+ const evidence=Boolean(p.evidence);
+ const imageHeader=evidence?"언론 보도 및 공식 채널 공개":"작업 이미지";
+ const imageCountLabel=evidence?" RECORDS":" IMAGES";
+ const photoNote=evidence?'<p class="evidence-explainer">아래 이미지는 화보만 추출한 사진이 아니라 기사 화면과 X:IN 공식 계정 게시물의 원본 캡처입니다. 매체명·기사 제목·계정명·게시 정보가 함께 보이도록 유지했습니다. 이미지를 누르면 원본 화면을 크게 볼 수 있습니다.</p>':"";
+ const statusText=evidence?"원본 기사 및 공식 SNS 캡처 업로드 대기 중":"촬영 이미지 업로드 준비 중";
+ const images=p.images?.length?'<section class="dialog-section project-photo-section'+(evidence?' project-evidence':'')+'"><h3>'+imageHeader+' <span class="image-count">'+p.images.length.toString().padStart(2,"0")+imageCountLabel+'</span></h3>'+photoNote+'<p class="photo-upload-status">'+statusText+'</p><div class="project-photo-grid">'+p.images.map((img,i)=>'<figure class="project-photo'+(i===0&&!evidence?' project-photo-wide':'')+'" style="display:none"><a target="_blank" rel="noopener noreferrer" href="'+escapeHTML(img.src)+'" aria-label="'+escapeHTML(img.alt||p.title)+' 원본 캡처 보기"><img src="'+escapeHTML(img.src)+'" alt="'+escapeHTML(img.alt||p.title)+'" loading="lazy" decoding="async"></a><figcaption>'+escapeHTML(img.caption||"")+'</figcaption></figure>').join("")+'</div></section>':'<div class="dialog-hero">프로젝트 이미지 업데이트 예정</div>';
  content.innerHTML='<div class="dialog-head"><span class="eyebrow">PROJECT DETAIL</span><h2 id="dialogTitle">'+escapeHTML(p.title)+'</h2><div class="tags">'+tags(p.tags)+'</div></div>'+
  '<dl class="dialog-meta"><dt>작업 영역</dt><dd>'+tags(p.tags)+'</dd>'+(p.brand?'<dt>브랜드</dt><dd>'+escapeHTML(p.brand)+'</dd>':'')+'<dt>작업 기간</dt><dd>'+escapeHTML(p.dates)+'</dd>'+(p.contribution?'<dt>기여도</dt><dd>'+escapeHTML(p.contribution)+'</dd>':'')+'<dt>주요 역할</dt><dd>'+escapeHTML(p.roles.join(" · "))+'</dd></dl>'+
  '<section class="dialog-section"><h3>프로젝트 소개</h3>'+intro+'</section>'+
