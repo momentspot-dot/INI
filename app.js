@@ -77,7 +77,19 @@ const projects = [
   {src:"./images/miu-profile-01.jpg",alt:"핑크 키치 콘셉트 공간에 앉아 있는 MIU의 프로필 화보",caption:"PROFILE / KITSCH & HIGH-KEY 01"},
   {src:"./images/miu-profile-02.jpg",alt:"핑크색 의상과 소품을 활용해 촬영한 MIU의 프로필 화보",caption:"PROFILE / KITSCH & HIGH-KEY 02"}
  ]},
- {title:"Team percent",dates:"기간 확인 필요",tags:["촬영","기획"],summary:"댄서 및 아티스트 프로필, 단체 사진 작업",description:"안무 제작, 디렉팅, 백업댄서 등 다양한 춤 분야에서 활동하는 댄서들의 프로필 및 단체 사진을 촬영했습니다.",roles:["촬영","연출","디렉팅"],good:[],improve:[],images:[]}
+ {title:"TEAM PERCENT",brand:"TEAM PERCENT (퍼센트)",dates:"기간 확인 필요",tags:["촬영","연출","디렉팅","리터칭"],summary:"댄서별 개성을 담은 개인 프로필과 팀의 단체 화보 촬영",description:"안무 제작, 퍼포먼스 디렉팅, 백업댄서 등 다양한 분야에서 활동하는 댄서팀 TEAM PERCENT의 개인 프로필 및 단체 사진 촬영 프로젝트입니다. 멤버별 활동 분야와 개성을 반영한 연출·촬영·리터칭을 진행했습니다.",introPoints:[
+ "안무 제작, 퍼포먼스 디렉팅, 백업댄서 등 다양한 활동을 펼치는 댄서팀의 개인 프로필과 단체 사진을 촬영했습니다.",
+ "각 멤버의 활동 영역과 원하는 이미지에 맞춰 포즈·구도·조명 등의 연출을 조정하고, 개인별 특성에 맞는 리터칭을 진행했습니다.",
+ "개인 프로필과 함께 팀 전체의 에너지가 드러나는 단체 이미지를 구성했습니다."
+ ],roles:["개인 프로필 및 단체 사진 촬영","촬영 콘셉트·포즈·구도 연출","멤버별 디렉팅 및 리터칭"],good:[
+ "멤버마다 다른 활동 분야와 이미지에 맞춰 연출 방식과 사진 구성을 다양하게 시도했습니다.",
+ "각자의 개성이 드러나는 이미지를 제작하면서도 개별 니즈에 맞춘 촬영과 리터칭을 진행했습니다."
+ ],improve:[
+ "강한 개성과 콘셉트를 조율하는 데 집중하면서, 기본이 되는 정형적인 프로필 컷을 충분히 확보하지 못했습니다.",
+ "멤버별 개성에 집중한 만큼 이를 하나의 시각적 기준으로 묶어 팀 전체의 톤앤매너를 통일하는 시도를 더 해보지 못한 점이 아쉬웠습니다."
+ ],images:[
+  {src:"./images/team-percent-portfolio.png",alt:"TEAM PERCENT 멤버별 인물 프로필 7컷과 역광 실루엣 단체 사진으로 구성된 포트폴리오 캡처",caption:"TEAM PERCENT / MEMBER PORTRAITS & GROUP IMAGE"}
+ ]}
 ];
 
 // null levels are intentional: ask the portfolio owner to verify skill ratings.
