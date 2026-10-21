@@ -24,3 +24,13 @@ Extract `xin-original-publication-evidence.zip` and upload the four original JPG
 
 The site labels these as publication evidence and links each preview to the full original screenshot.
 Use only media and screenshots you have permission to publish.
+
+## MIU YouTube channel banner and portrait photography
+
+The MIU project uses three web-optimized JPEGs. Extract `miu-portfolio-images.zip` and upload exactly these files directly to the `images/` folder:
+
+- `miu-channel-banner.jpg` — original YouTube channel banner screenshot, subscriber count obscured for privacy/presentation, otherwise preserved
+- `miu-profile-01.jpg` — MIU pink room portrait 1
+- `miu-profile-02.jpg` — MIU pink room portrait 2
+
+These images appear in the project's detail modal when committed to `images/`. Photos and channel imagery should be published only with appropriate permission.
