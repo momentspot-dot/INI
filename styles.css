@@ -87,3 +87,12 @@
 .project-photo-grid:not(:has(.project-photo[style*="block"])):empty{display:none}
 @media(max-width:560px){.project-photo-grid{gap:8px}.project-photo figcaption{font-size:9px}.project-intro-points li{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.project-photo img{transition:none}}
+
+/* Project card metadata — match the Notion-style detail fields */
+.project-meta-line{display:grid;grid-template-columns:68px minmax(0,1fr);column-gap:10px;align-items:start;margin-top:12px}
+.project-meta-line .tags{margin-bottom:0}
+.project-meta-label{font-size:10px;color:#889098;font-weight:500;line-height:1.9;white-space:nowrap}
+.project-meta-line .date{line-height:1.9}
+.dialog-meta dd .tags{margin:0;gap:5px}
+.dialog-meta dd .tags .tag{display:inline-block}
+@media(max-width:720px){.project-meta-line{grid-template-columns:65px minmax(0,1fr);gap:8px}}
