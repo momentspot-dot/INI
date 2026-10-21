@@ -68,3 +68,22 @@
  .masthead-profession{font-size:9px}
  .section.about{padding-top:60px}
 }
+
+/* MOMENTIS STUDIO: project documentation and photographic work */
+.project-intro-points{list-style:none;padding:0;margin:0;display:grid;gap:13px}
+.project-intro-points li{font-size:13px;line-height:1.95;color:#424a51;word-break:keep-all;border-left:2px solid #d3dffd;padding:0 0 0 15px}
+.project-photo-section{margin-top:38px}
+.project-photo-section h3{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.image-count{color:#a0a6ab;font-size:10px;letter-spacing:.08em;font-weight:500}
+.project-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:16px}
+.project-photo{margin:0;min-width:0;overflow:hidden}
+.project-photo-wide{grid-column:1/-1}
+.project-photo a{display:block;overflow:hidden;background:#eff0f1}
+.project-photo img{display:block;width:100%;height:auto;transition:transform .22s}
+.project-photo a:hover img{transform:scale(1.025)}
+.project-photo figcaption{color:#91989f;font-size:10px;letter-spacing:.07em;padding-top:9px;line-height:1.45}
+.photo-upload-status{background:#f2f3f4;border:1px dashed #d7dade;color:#9199a0;border-radius:5px;min-height:90px;display:flex;align-items:center;justify-content:center;font-size:12px;padding:16px}
+.photo-upload-status[hidden]{display:none}
+.project-photo-grid:not(:has(.project-photo[style*="block"])):empty{display:none}
+@media(max-width:560px){.project-photo-grid{gap:8px}.project-photo figcaption{font-size:9px}.project-intro-points li{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.project-photo img{transition:none}}
