@@ -34,3 +34,7 @@ The MIU project uses three web-optimized JPEGs. Extract `miu-portfolio-images.zi
 - `miu-profile-02.jpg` — MIU pink room portrait 2
 
 These images appear in the project's detail modal when committed to `images/`. Photos and channel imagery should be published only with appropriate permission.
+
+## TEAM PERCENT 멤버별 프로필 & 단체 화보
+
+Upload `team-percent-portfolio.png` directly to the `images/` folder. The file is a complete portfolio screenshot featuring individual dancer portraits and a group silhouette image; keep it uncropped. The website loads it from `./images/team-percent-portfolio.png` in the TEAM PERCENT project detail dialog. The project date is intentionally left as "기간 확인 필요" until confirmed.
