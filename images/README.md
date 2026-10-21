@@ -11,13 +11,16 @@ Place these six optimized JPEG files directly in this folder (not in an addition
 
 The portfolio's MOMENTIS STUDIO project modal loads these images from `/images/`. Please upload only photographs you have permission to publish.
 
-## X:IN 화보 촬영
+## X:IN 화보 촬영 — 언론 보도·공식 SNS 증빙
 
-Upload these four JPG files from the supplied X:IN ZIP directly into this `images` folder:
+The four files below are original, unmodified phone screenshots, not isolated/retouched portfolio photographs. Keep article headlines, publisher context, dates, and official social media account names visible.
 
-- `xin-01-press-dark.jpg` — article / dark concept
-- `xin-02-press-pastel.jpg` — article / light concept
-- `xin-03-official-editorial.jpg` — official SNS / member editorial
-- `xin-04-official-group.jpg` — official SNS / group portrait
+Extract `xin-original-publication-evidence.zip` and upload the four original JPGs directly to this folder:
 
-Images appear in the X:IN project modal after all files are committed to this folder. Upload only images you have the right to publish.
+- `xin-01-press-original.jpg` — original news article screenshot (dark concept)
+- `xin-02-press-original.jpg` — original Daily Sports Korea news article screenshot (light concept)
+- `xin-03-official-original.jpg` — X:IN official Instagram original screenshot (member editorial)
+- `xin-04-official-original.jpg` — X:IN official Instagram original screenshot (group photo)
+
+The site labels these as publication evidence and links each preview to the full original screenshot.
+Use only media and screenshots you have permission to publish.
