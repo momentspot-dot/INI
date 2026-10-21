@@ -1,6 +1,26 @@
 // Edit project information here. Empty image arrays mean that photos have not yet been supplied.
 const projects = [
- {title:"MOMENTIS STUDIO",dates:"2022.01.20 — 2022.12.01",tags:["콘텐츠 제작","촬영","기획","디렉팅","인테리어"],summary:"프로필 촬영 스튜디오 제작 및 운영 프로젝트",description:"스튜디오 인테리어부터 각종 소품과 장비 구성, 촬영 공간 및 개인 사무실 마련까지 진행했습니다. 프로필 촬영과 제품 촬영, 마케팅 협업 등 다양한 활동을 수행했습니다.",roles:["스튜디오 구성 및 운영","촬영 공간 기획","프로필 및 제품 촬영","마케팅 협업"],good:[],improve:[],images:[]},
+ {title:"MOMENTIS STUDIO",dates:"2022.01.20 — 2022.12.01",tags:["촬영","기획","디렉팅","제작","스튜디오 운영"],summary:"소규모 공간을 세 가지 콘셉트의 프로필 스튜디오로 구축·운영",description:"프로필 촬영에 특화된 스튜디오를 직접 기획·구축하고, 샘플 제작부터 촬영·운영·마케팅·대외 협업까지 진행한 프로젝트입니다.",introPoints:[
+ "스튜디오 인테리어, 운영에 필요한 신고, 촬영 장비 및 소품 구성부터 촬영 공간과 개인 사무 공간까지 직접 구축했습니다.",
+ "프로필 전문 스튜디오의 방향성을 정하고, 각 콘셉트를 보여줄 샘플 촬영과 포트폴리오를 제작했습니다.",
+ "프로필 및 제품 촬영, 촬영 디렉팅, 마케팅과 외부 협업을 통해 다양한 프로젝트를 운영했습니다."
+ ],roles:["프로필·제품 촬영","촬영 기획 및 콘셉트 디렉팅","스튜디오 공간·소품·장비 구성 및 제작","운영·마케팅 및 외부 협업"],good:[
+ "한정된 예산과 30평 미만의 공간을 활용해 서로 다른 3가지 콘셉트의 촬영 공간을 구현했습니다.",
+ "연출과 소품을 다양하게 구성해 스튜디오만의 촬영 스타일을 구축하고 다수의 촬영 의뢰로 연결했습니다.",
+ "홍대 인접 입지와 개성 있는 촬영 스타일을 활용해 댄서 고객층의 수요를 확보했습니다.",
+ "스튜디오 운영을 기반으로 쇼핑몰, 배우 에이전시, 소속사 등과 협업하며 촬영 수주 범위를 넓혔습니다."
+ ],improve:[
+ "댄서와 배우 등 전문 활동 고객 중심의 포트폴리오로 인해 일반 고객에게는 진입 장벽이 높게 느껴질 수 있었습니다.",
+ "일반 고객의 니즈를 반영한 샘플 촬영과 상품 구성을 충분히 마련하지 못했습니다.",
+ "대학생 비중이 높은 지역적 특성을 활용한 홍보·상품 전략이 부족했습니다."
+ ],images:[
+  {src:"./images/momentis-studio-01.jpg",alt:"MOMENTIS STUDIO 스튜디오 공간 구축 및 인테리어 과정",caption:"STUDIO BUILDING / 스튜디오 조성 과정"},
+  {src:"./images/momentis-studio-02.jpg",alt:"밝은 배경의 여성 프로필 촬영",caption:"PORTRAIT / PROFILE"},
+  {src:"./images/momentis-studio-03.jpg",alt:"흑백 아티스트 프로필 화보",caption:"EDITORIAL / PORTRAIT"},
+  {src:"./images/momentis-studio-04.jpg",alt:"암부와 조명을 강조한 흑백 남성 프로필",caption:"PORTRAIT / BLACK & WHITE"},
+  {src:"./images/momentis-studio-05.jpg",alt:"붉은색과 푸른색 조명으로 연출한 아티스트 화보",caption:"EDITORIAL / CREATIVE LIGHTING"},
+  {src:"./images/momentis-studio-06.jpg",alt:"넓은 여백이 있는 흑백 남성 프로필",caption:"PORTRAIT / MINIMAL"}
+ ]},
  {title:"MOMEN SPOT",dates:"2019.07",tags:["콘텐츠 제작","촬영","기획","디렉팅","인테리어"],summary:"촬영 콘셉트 기획 및 고객 프로젝트 운영",description:"촬영 콘셉트, 운영 콘셉트, 색감 등 스튜디오의 다양한 부분을 제작하고, 고객 유치를 위한 미팅을 진행했습니다.",roles:["고객 미팅","촬영 콘셉트 기획","운영 및 디렉팅"],good:[],improve:[],images:[]},
  {title:"롯데백화점 제품 촬영팀",dates:"2023.03.01 — 2023.05.10",tags:["촬영","기획"],summary:"백화점 제품 촬영실 소속 제품 촬영",description:"롯데백화점 제품 촬영실에 소속되어 제품 촬영 작업을 진행했습니다.",roles:["제품 촬영","현장 디렉팅"],good:[],improve:[],images:[]},
  {title:"아이돌 X:IN 촬영",dates:"2023.02.01 — 2023.03.01",tags:["촬영","기획","디렉팅"],summary:"아이돌 X:IN 화보 촬영",description:"아이돌 X:IN의 화보 촬영 프로젝트입니다.",roles:["촬영","연출","디렉팅"],good:[],improve:[],images:[]},
@@ -33,12 +53,21 @@ projects.forEach((p,i)=>{
 });
 function openProject(p){
  previousFocus=document.activeElement;
- const images=p.images?.length?p.images.map(img=>'<img class="dialog-image" src="'+escapeHTML(img.src)+'" alt="'+escapeHTML(img.alt||p.title)+'" loading="lazy">').join(""):'<div class="dialog-hero">프로젝트 이미지 업데이트 예정</div>';
+ const intro=p.introPoints?.length?'<ul class="project-intro-points">'+p.introPoints.map(t=>'<li>'+escapeHTML(t)+'</li>').join("")+'</ul>':'<p>'+escapeHTML(p.description)+'</p>';
+ const images=p.images?.length?'<section class="dialog-section project-photo-section"><h3>작업 이미지 <span class="image-count">'+p.images.length.toString().padStart(2,"0")+' IMAGES</span></h3><p class="photo-upload-status">촬영 이미지 업로드 준비 중</p><div class="project-photo-grid">'+p.images.map((img,i)=>'<figure class="project-photo'+(i===0?' project-photo-wide':'')+'" style="display:none"><a target="_blank" rel="noopener noreferrer" href="'+escapeHTML(img.src)+'" aria-label="'+escapeHTML(img.alt||p.title)+' 이미지 크게 보기"><img src="'+escapeHTML(img.src)+'" alt="'+escapeHTML(img.alt||p.title)+'"></a><figcaption>'+escapeHTML(img.caption||"")+'</figcaption></figure>').join("")+'</div></section>':'<div class="dialog-hero">프로젝트 이미지 업데이트 예정</div>';
  content.innerHTML='<div class="dialog-head"><span class="eyebrow">PROJECT DETAIL</span><h2 id="dialogTitle">'+escapeHTML(p.title)+'</h2><div class="tags">'+tags(p.tags)+'</div></div>'+
  '<dl class="dialog-meta"><dt>작업 영역</dt><dd>'+escapeHTML(p.tags.join(" · "))+'</dd><dt>작업 기간</dt><dd>'+escapeHTML(p.dates)+'</dd><dt>주요 역할</dt><dd>'+escapeHTML(p.roles.join(" · "))+'</dd></dl>'+
- images+'<section class="dialog-section"><h3>프로젝트 소개</h3><p>'+escapeHTML(p.description)+'</p></section>'+
+ '<section class="dialog-section"><h3>프로젝트 소개</h3>'+intro+'</section>'+
  '<section class="dialog-section"><h3>역할</h3>'+bullets(p.roles)+'</section>'+
+ images+
  '<section class="dialog-section dialog-learned"><h3>LESSONS LEARNED</h3><h4>좋았던 점</h4>'+bullets(p.good)+'<h4>아쉬웠던 점</h4>'+bullets(p.improve)+'</section>';
+ content.querySelectorAll(".project-photo img").forEach(img=>{
+  const frame=img.closest(".project-photo"),status=content.querySelector(".photo-upload-status");
+  const ready=()=>{frame.style.display="block";if(status)status.hidden=true};
+  img.addEventListener("load",ready,{once:true});
+  img.addEventListener("error",()=>{frame.style.display="none"},{once:true});
+  if(img.complete&&img.naturalWidth>0)ready();
+ });
  dialog.showModal();closeButton.focus();
 }
 closeButton.addEventListener("click",()=>dialog.close());
