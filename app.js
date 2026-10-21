@@ -102,7 +102,7 @@ const skillCategories=[
   {name:"Adobe Premiere Pro",level:3,note:"영상 컷 편집 · 기본 후반 작업"}
  ]},
  {title:"AI & Creative Tools",items:[
-  {name:"ChatGPT",level:3,note:"아이디어 정리 · 기획 · 문서 및 웹 제작 보조"},
+  {name:"ChatGPT",level:4,note:"아이디어 정리 · 기획 · 문서 및 웹 제작 보조"},
   {name:"ACE-Step",level:3,note:"AI 음악 생성 도구 활용"},
   {name:"생성형 AI 도구",level:3,note:"생성형 도구를 이용한 콘텐츠 제작"}
  ]},
