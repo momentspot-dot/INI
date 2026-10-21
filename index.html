@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fafaf9">
+  <meta name="description" content="민경재 포토그래퍼 포트폴리오. 프로젝트, 작업 아카이브, 경력 및 스킬을 소개합니다.">
+  <meta property="og:title" content="MIN GYEONGJAE — Photographer">
+  <meta property="og:description" content="Photography · Creative Direction · Visual Storytelling">
+  <title>MIN GYEONGJAE — Photographer Portfolio</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="masthead" id="top">
+      <div class="topline"><span>MIN GYEONGJAE <span class="topline-separator">/</span> PHOTOGRAPHER</span><span>SELECTED WORKS &amp; EXPERIENCE</span></div>
+      <div class="masthead-title"><h1>PORTFOLIO<span class="period">.</span></h1><span class="masthead-side">PHOTOGRAPHY<br>AND BEYOND</span></div>
+      <div class="masthead-rule"></div>
+    </header>
+
+    <main>
+      <section class="section about" aria-labelledby="about-heading">
+        <div class="section-label"><span class="section-index">01 /</span> <h2 id="about-heading">About</h2></div>
+        <div class="about-grid">
+          <aside class="identity">
+            <h3>민경재 <span class="latin">Min Gyeongjae</span></h3>
+            <p>Photographer<br>Creative Direction</p>
+            <p class="muted micro">CONTACT<br><span>연락처 등록 예정</span></p>
+          </aside>
+          <div class="biography">
+            <div class="intro-block">
+              <span class="eyebrow">INTRODUCTION</span>
+              <p class="intro-copy">사진으로 사람과 브랜드의 이야기를 표현합니다.</p>
+              <p class="prose">웨딩 스튜디오에서 사진과 고객 서비스를 배웠고, 촬영 스튜디오 운영과 프리랜서 활동을 통해 프로필, 콘텐츠, 제품 촬영 등 다양한 분야를 경험했습니다. 촬영부터 콘셉트 기획과 디렉팅까지 함께 고민합니다.</p>
+            </div>
+            <div class="bio-subsection">
+              <h3>Experience</h3>
+              <div class="timeline"><span>국방TV</span><time>2018.07 — 2018.12</time></div>
+              <div class="timeline"><span>테라스스튜디오</span><time>2018.11 — 2019.07</time></div>
+              <div class="timeline"><span>모먼트 스팟</span><time>2019.07 — 2023.12</time></div>
+              <div class="timeline"><span>포레스트 웨일</span><time>2024.08 — 2026.02</time></div>
+            </div>
+            <div class="bio-subsection">
+              <h3>Education</h3>
+              <div class="timeline"><span>설화고등학교</span><time>2013.03 — 2015.02</time></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects" id="projects" aria-labelledby="projects-heading">
+        <div class="section-heading">
+          <div><span class="section-index">02 / SELECTED EXPERIENCES</span><h2 id="projects-heading" class="display-heading">Projects<span class="dot">.</span></h2></div>
+          <p>촬영과 기획, 운영까지.<br>프로젝트를 눌러 자세한 내용을 확인하세요.</p>
+        </div>
+        <div id="projectGrid" class="project-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section gallery" id="gallery" aria-labelledby="gallery-heading">
+        <div class="section-heading">
+          <div><span class="section-index">03 / PHOTOGRAPHY ARCHIVE</span><h2 id="gallery-heading" class="display-heading">Gallery<span class="dot">.</span></h2></div>
+          <p>다양한 분야의 사진 작업 아카이브.<br>대표 결과물은 순차적으로 업데이트됩니다.</p>
+        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+        <div class="archive-panel">
+          <div><span class="eyebrow">FULL PHOTO ARCHIVE</span><h3>More works, one place.</h3><p>전체 촬영 작업물을 확인할 수 있는 MYBOX 공유 링크를 준비하고 있습니다.</p></div>
+          <span class="archive-action" id="archiveAction" aria-disabled="true">MYBOX 링크 준비 중 <span aria-hidden="true">↗</span></span>
+        </div>
+      </section>
+
+      <section class="section skills" id="skills" aria-labelledby="skills-heading">
+        <div class="section-heading">
+          <div><span class="section-index">04 / CAPABILITIES &amp; TOOLS</span><h2 id="skills-heading" class="display-heading">Skills<span class="dot">.</span></h2></div>
+          <p>주요 프로그램과 작업 역량.<br>숙련도는 5단계 기준으로 표시합니다.</p>
+        </div>
+        <div id="skillGroups" class="skill-groups"></div>
+        <p class="skills-caption">* 숙련도와 AI 사용 도구는 최종 확인 후 확정됩니다.</p>
+      </section>
+    </main>
+
+    <footer class="footer"><div><span class="footer-name">MIN GYEONGJAE</span><p>Photographer / Visual Creator</p></div><a href="#top" class="back-top">BACK TO TOP ↑</a><span class="copyright">© <span id="copyrightYear">2026</span> MIN GYEONGJAE</span></footer>
+  </div>
+
+  <dialog class="project-dialog" id="projectDialog" aria-labelledby="dialogTitle">
+    <div class="dialog-inner">
+      <button id="closeDialog" type="button" class="dialog-close" aria-label="프로젝트 상세 닫기"><span aria-hidden="true">×</span></button>
+      <div id="dialogContent"></div>
+    </div>
+  </dialog>
+</body>
+</html>
