@@ -55,7 +55,7 @@
 /* Minimal portfolio masthead */
 .masthead-simple{padding-top:45px}
 .masthead-simple-row{display:flex;justify-content:space-between;align-items:baseline;gap:22px;padding-bottom:27px}
-.masthead-simple .masthead-brand{font-family:'Pretendard',sans-serif;font-size:clamp(27px,3.5vw,38px);font-weight:650;letter-spacing:-.045em;line-height:1.25;margin:0}
+.masthead-simple .masthead-brand{font-family:'Pretendard',sans-serif;font-size:clamp(25px,2.8vw,32px);font-weight:600;letter-spacing:-.045em;line-height:1.25;margin:0}
 .masthead-brand-suffix{font-weight:400;color:#777f87;margin-left:8px}
 .masthead-profession{font-size:10px;letter-spacing:.14em;font-weight:600;color:#8a9299;white-space:nowrap}
 .masthead-simple .masthead-rule{height:1px;background:var(--rule)}
@@ -63,7 +63,7 @@
 @media(max-width:720px){
  .masthead-simple{padding-top:26px}
  .masthead-simple-row{align-items:flex-start;gap:8px;padding-bottom:20px;flex-direction:column}
- .masthead-simple .masthead-brand{font-size:clamp(24px,6.1vw,31px);letter-spacing:-.048em}
+ .masthead-simple .masthead-brand{font-size:clamp(23px,5.2vw,27px);letter-spacing:-.045em}
  .masthead-brand-suffix{margin-left:4px}
  .masthead-profession{font-size:9px}
  .section.about{padding-top:60px}
