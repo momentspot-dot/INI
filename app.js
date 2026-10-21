@@ -73,7 +73,7 @@ const projects = [
  "헤어·메이크업 스태프를 추가로 구성하고 촬영 중 변형을 더했다면, 보다 풍부한 분위기와 결과물을 확보할 수 있었을 것입니다.",
  "안정적인 표현에 집중한 만큼 스타일링과 구도에서 더욱 과감한 변화를 시도하지 못한 점이 아쉬웠습니다."
  ],images:[
-  {src:"./images/miu-channel-banner.jpg",alt:"MIU 유튜브 채널에 적용됐던 키치한 레트로 스타일 배너와 프로필 화면. 구독자 수는 비표시 처리",caption:"YOUTUBE CHANNEL / 실제 채널 적용 화면 · 구독자 수 비표시"},
+  {src:"./images/miu-banner-no-subscribers.png",alt:"MIU 유튜브 채널에 적용됐던 키치한 레트로 스타일 배너와 프로필 화면. 구독자 수는 비표시 처리",caption:"YOUTUBE CHANNEL / 실제 채널 적용 화면 · 구독자 수 비표시"},
   {src:"./images/miu-profile-01.jpg",alt:"핑크 키치 콘셉트 공간에 앉아 있는 MIU의 프로필 화보",caption:"PROFILE / KITSCH & HIGH-KEY 01"},
   {src:"./images/miu-profile-02.jpg",alt:"핑크색 의상과 소품을 활용해 촬영한 MIU의 프로필 화보",caption:"PROFILE / KITSCH & HIGH-KEY 02"}
  ]},
