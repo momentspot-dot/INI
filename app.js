@@ -21,7 +21,7 @@ const projects = [
   {src:"./images/momentis-studio-05.jpg",alt:"붉은색과 푸른색 조명으로 연출한 아티스트 화보",caption:"EDITORIAL / CREATIVE LIGHTING"},
   {src:"./images/momentis-studio-06.jpg",alt:"넓은 여백이 있는 흑백 남성 프로필",caption:"PORTRAIT / MINIMAL"}
  ]},
- {title:"MOMENT SPOT",brand:"모먼트 스팟",dates:"2019.07 — 2024.03",tags:["콘텐츠 제작","촬영","기획","디렉팅","인테리어"],summary:"웨딩 촬영 콘셉트·색감 기획부터 본식 현장 촬영과 보정까지",description:"촬영 콘셉트, 운영 콘셉트, 브랜드 고유의 색감 등 다양한 요소를 직접 기획·제작하고, 고객 유치를 위한 상담과 미팅을 진행했습니다. 이후 사전 촬영 협의부터 본식 현장 촬영, 사진 셀렉 및 색보정·리터칭까지 촬영 전반의 과정을 직접 수행했습니다.",introPoints:[
+ {title:"MOMENTSPOT",brand:"모먼트스팟",dates:"2019.07 — 2024.03",tags:["콘텐츠 제작","촬영","기획","디렉팅","인테리어"],summary:"웨딩 촬영 콘셉트·색감 기획부터 본식 현장 촬영과 보정까지",description:"촬영 콘셉트, 운영 콘셉트, 브랜드 고유의 색감 등 다양한 요소를 직접 기획·제작하고, 고객 유치를 위한 상담과 미팅을 진행했습니다. 이후 사전 촬영 협의부터 본식 현장 촬영, 사진 셀렉 및 색보정·리터칭까지 촬영 전반의 과정을 직접 수행했습니다.",introPoints:[
  "촬영 콘셉트와 운영 콘셉트, 브랜드 고유의 색감 등 스튜디오 운영과 촬영에 필요한 시각적 요소를 기획하고 제작했습니다.",
  "고객 유치를 위한 상담과 사전 미팅을 진행하며 촬영 일정과 원하는 분위기를 조율했습니다.",
  "본식 당일 현장 촬영을 직접 진행하고, 사진 셀렉·색보정·리터칭을 거쳐 최종 결과물을 완성했습니다."
@@ -33,7 +33,7 @@ const projects = [
  "초기 자본과 장비 예산이 제한되어 다양한 렌즈를 활용한 실험을 충분히 시도하지 못했습니다.",
  "빈티지 렌즈 특유의 보케를 강조한 연출이나 어안렌즈를 활용한 촬영 등 기획했던 일부 아이디어를 실제 작업으로 구현하지 못했습니다."
  ],images:[
-  {src:"./images/momen-spot-instagram.jpg",alt:"모먼트 스팟 인스타그램 프로필과 웨딩 스냅 작업 아카이브",caption:"MOMENT SPOT / WEDDING PHOTOGRAPHY ARCHIVE"}
+  {src:"./images/momen-spot-instagram.jpg",alt:"모먼트스팟 인스타그램 프로필과 웨딩 스냅 작업 아카이브",caption:"MOMENTSPOT / WEDDING PHOTOGRAPHY ARCHIVE"}
  ]},
  {title:"롯데백화점 제품 촬영팀",dates:"2023.03.01 — 2023.05.10",tags:["촬영","기획"],summary:"백화점 제품 촬영실 소속 제품 촬영",description:"롯데백화점 제품 촬영실에 소속되어 제품 촬영 작업을 진행했습니다.",roles:["제품 촬영","현장 디렉팅"],good:[],improve:[],images:[]},
  {title:"아이돌 X:IN 촬영",dates:"2023.02.01 — 2023.03.01",tags:["촬영","기획","디렉팅"],summary:"아이돌 X:IN 화보 촬영",description:"아이돌 X:IN의 화보 촬영 프로젝트입니다.",roles:["촬영","연출","디렉팅"],good:[],improve:[],images:[]},
