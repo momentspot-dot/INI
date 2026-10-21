@@ -156,3 +156,75 @@
 
 /* Subtle numeric skill ratings alongside existing five-step squares */
 .level-value{font-size:10px;line-height:1;min-width:24px;text-align:right;margin-left:5px;color:#8d939c;font-weight:500;font-variant-numeric:tabular-nums}
+
+/* Portfolio v2 preview: photographic project cards and legible typography.
+   All previous rules remain above this block for a quick revert. */
+.project-grid{gap:20px}
+.project-card{padding:0;min-height:0;height:100%;width:100%;overflow:hidden;display:flex;flex-direction:column;border-radius:9px;color:var(--ink)}
+.project-cover{position:relative;aspect-ratio:16/10;flex-shrink:0;overflow:hidden;background:#f2f3f3;border-bottom:1px solid var(--rule)}
+.project-cover img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .35s ease}
+.project-cover img[hidden]{display:none}
+.project-cover--portrait img{object-position:center 37%}
+.project-cover--wedding img{object-position:center 76%}
+.project-cover--product{background:#fafafa}
+.project-cover--product img{object-fit:contain;padding:21px}
+.project-cover--evidence img{object-position:center 52%}
+.project-cover--team img{object-position:center 77%}
+.project-cover-fallback{width:100%;height:100%;display:grid;place-items:center;color:#888e96;font-size:13px}
+.project-cover-fallback[hidden]{display:none}
+.project-card-body{padding:20px 23px 23px;display:flex;flex:1;flex-direction:column;min-width:0}
+.project-card .project-top{align-items:center}
+.project-num{font-size:12px;letter-spacing:.05em}
+.project-card h3{font-size:21px;font-weight:700;line-height:1.35;letter-spacing:-.035em;margin:12px 0 8px;word-break:keep-all}
+.project-card .project-summary{font-size:14px;line-height:1.7;min-height:47px;color:#646d75;margin:0;word-break:keep-all}
+.project-card .project-bottom{padding-top:18px}
+.project-card .project-meta-line{grid-template-columns:70px minmax(0,1fr);gap:8px;margin-top:11px}
+.project-meta-label{font-size:12px;line-height:1.65}
+.project-card .date{font-size:12px;line-height:1.65;color:#707980}
+.project-card .tag{font-size:11px;padding:4px 7px;line-height:1.25}
+.tag-count{background:#f1f2f4!important;color:#68717a!important}
+.project-card:hover .project-cover img{transform:scale(1.025)}
+.project-card:hover .project-cover--product img{transform:none}
+.project-card:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+
+/* Content readability — increase previously tiny body and metadata labels */
+.section-heading p{font-size:13px;line-height:1.8}
+.section-index,.eyebrow{font-size:12px}
+.identity .contact-details{font-size:14px}
+.prose{font-size:15px;line-height:1.95}
+.career-hint{font-size:12px}
+.career-range{font-size:13px}
+.career-length{font-size:12px}
+.career-company{font-size:16px}
+.career-type,.career-glance{font-size:13px;line-height:1.65}
+.career-responsibilities li{font-size:14px;line-height:1.8}
+.career-duty{font-size:12px}
+.dialog-meta{font-size:14px;line-height:1.6}
+.dialog-meta dt{font-size:13px}
+.dialog-meta .tag{font-size:11px}
+.dialog-section h3{font-size:14px}
+.dialog-section p,.dialog-section li{font-size:14px;line-height:1.9}
+.dialog-section h4,.dialog-learned h4{font-size:13px}
+.project-intro-points li{font-size:14px;line-height:1.8}
+.project-photo figcaption,.project-evidence .project-photo figcaption{font-size:12px}
+.evidence-explainer,.project-evidence .evidence-explainer{font-size:13px}
+.skill-name{font-size:14px}
+.skill-note{font-size:12px;line-height:1.6}
+.level-value{font-size:12px}
+.skills-caption{font-size:12px}
+.archive-panel p{font-size:13px}
+.gallery-caption span:last-child{font-size:11px}
+.social-description{font-size:12px}
+@media(max-width:720px){
+ .project-grid{gap:15px}
+ .project-card{min-height:0}
+ .project-cover{aspect-ratio:16/10}
+ .project-card-body{padding:18px 18px 20px}
+ .project-card h3{font-size:19px}
+ .project-card .project-summary{font-size:14px;min-height:0}
+ .project-card .project-meta-line{grid-template-columns:70px minmax(0,1fr)}
+ .dialog-meta{font-size:13px}
+ .dialog-section p,.dialog-section li,.project-intro-points li,.career-responsibilities li{font-size:14px}
+ .section-index,.eyebrow{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){.project-cover img{transition:none}.project-card:hover .project-cover img{transform:none}}
