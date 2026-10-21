@@ -92,6 +92,17 @@ const projects = [
  ]}
 ];
 
+// Representative covers: images already uploaded to this repository.
+// Article / social screenshots remain unaltered as evidence in their project modals.
+const projectCovers={
+ "MOMENTIS STUDIO":{src:"./images/momentis-studio-02.jpg",alt:"스튜디오에서 촬영한 밝은 인물 프로필 사진",style:"portrait"},
+ "MOMENTSPOT":{src:"./images/momen-spot-instagram.jpg",alt:"MOMENTSPOT 웨딩 스냅 촬영 포트폴리오",style:"wedding"},
+ "롯데백화점 제품 촬영팀":{src:"./images/lotte-department-product-01.jpg",alt:"화이트와 레드 컬러의 운동화 제품 촬영",style:"product"},
+ "아이돌 X:IN 화보 촬영":{src:"./images/xin-03-official-original.jpg",alt:"걸그룹 X:IN 공식 계정에 게시된 멤버별 화보",style:"evidence"},
+ "인플루언서 MIU 유튜브 배너 및 프로필 사진 촬영":{src:"./images/miu-profile-01.jpg",alt:"MIU의 핑크 키치 콘셉트 프로필 사진",style:"portrait"},
+ "TEAM PERCENT":{src:"./images/team-percent-portfolio.png",alt:"TEAM PERCENT 댄서 개인 프로필과 단체 사진",style:"team"}
+};
+
 // Self-reported practical proficiency, rated from 1 (basic) to 5 (advanced).
 const skillCategories=[
  {title:"Photography & Retouching",items:[
@@ -129,7 +140,12 @@ const bullets=arr=>arr.length?'<ul>'+arr.map(x=>'<li>'+escapeHTML(x)+'</li>').jo
 let previousFocus=null;
 projects.forEach((p,i)=>{
  const b=document.createElement("button");b.type="button";b.className="project-card";b.setAttribute("aria-haspopup","dialog");
- b.innerHTML='<div class="project-top"><span class="project-num">PROJECT '+String(i+1).padStart(2,"0")+'</span><span class="project-arrow" aria-hidden="true">↗</span></div><h3>'+escapeHTML(p.title)+'</h3><p class="project-summary">'+escapeHTML(p.summary)+'</p><div class="project-bottom"><div class="project-meta-line"><span class="project-meta-label">작업 영역</span><div class="tags">'+tags(p.tags)+'</div></div><div class="project-meta-line"><span class="project-meta-label">작업 기간</span><span class="date">'+escapeHTML(p.dates)+'</span></div></div>';
+ b.setAttribute("aria-label",p.title+" 프로젝트 상세 보기");
+ const cover=projectCovers[p.title];
+ const photo=cover?'<div class="project-cover project-cover--'+escapeHTML(cover.style)+'"><img src="'+escapeHTML(cover.src)+'" alt="'+escapeHTML(cover.alt)+'" loading="lazy" decoding="async"><span class="project-cover-fallback" hidden>이미지 준비 중</span></div>':'';
+ b.innerHTML=photo+'<div class="project-card-body"><div class="project-top"><span class="project-num">PROJECT '+String(i+1).padStart(2,"0")+'</span><span class="project-arrow" aria-hidden="true">↗</span></div><h3>'+escapeHTML(p.title)+'</h3><p class="project-summary">'+escapeHTML(p.summary)+'</p><div class="project-bottom"><div class="project-meta-line"><span class="project-meta-label">작업 영역</span><div class="tags">'+tags(p.tags.slice(0,3))+(p.tags.length>3?'<span class="tag tag-count">+'+(p.tags.length-3)+'</span>':'')+'</div></div><div class="project-meta-line"><span class="project-meta-label">작업 기간</span><span class="date">'+escapeHTML(p.dates)+'</span></div></div></div>';
+ const img=b.querySelector(".project-cover img");
+ if(img)img.addEventListener("error",()=>{img.hidden=true;const fallback=b.querySelector(".project-cover-fallback");if(fallback)fallback.hidden=false},{once:true});
  b.addEventListener("click",()=>openProject(p));grid.appendChild(b);
 });
 function openProject(p){
