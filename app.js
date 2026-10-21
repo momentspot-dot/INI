@@ -92,12 +92,25 @@ const projects = [
  ]}
 ];
 
-// null levels are intentional: ask the portfolio owner to verify skill ratings.
+// Self-reported practical proficiency, rated from 1 (basic) to 5 (advanced).
 const skillCategories=[
- {title:"Photography & Design",items:[{name:"Adobe Photoshop",level:null,note:"리터칭 · 합성 · 색 보정"},{name:"Studio Photography",level:null,note:"인물 · 제품 · 프로필 촬영"}]},
- {title:"Video Editing",items:[{name:"Adobe Premiere Pro",level:null,note:"영상 편집"},{name:"Adobe After Effects",level:null,note:"영상 효과 · 모션"}]},
- {title:"AI & Creative Tools",items:[{name:"Generative AI",level:null,note:"사용 도구 및 숙련도 확인 후 반영"},{name:"AI-assisted Editing",level:null,note:"AI 활용 편집 경험 확인 후 반영"}]},
- {title:"Collaboration & Office",items:[{name:"Notion",level:null,note:"프로젝트 및 자료 정리"},{name:"Word · Excel · PowerPoint",level:null,note:"문서 · 데이터 · 발표 자료"}]}
+ {title:"Photography & Retouching",items:[
+  {name:"Adobe Photoshop",level:4,note:"인물 리터칭 · 합성 · 색보정"},
+  {name:"Photography",level:4,note:"인물 · 웨딩 · 제품 촬영 및 조명·현장 디렉팅"}
+ ]},
+ {title:"Video Editing",items:[
+  {name:"Adobe Premiere Pro",level:3,note:"영상 컷 편집 · 기본 후반 작업"}
+ ]},
+ {title:"AI & Creative Tools",items:[
+  {name:"ChatGPT",level:3,note:"아이디어 정리 · 기획 · 문서 및 웹 제작 보조"},
+  {name:"ACE-Step",level:3,note:"AI 음악 생성 도구 활용"},
+  {name:"생성형 AI 도구",level:3,note:"생성형 도구를 이용한 콘텐츠 제작"}
+ ]},
+ {title:"Office & Documents",items:[
+  {name:"Microsoft Word",level:3,note:"문서 작성 및 편집"},
+  {name:"Microsoft Excel",level:3,note:"기본 데이터 및 문서 관리"},
+  {name:"한글 (HWP)",level:3,note:"문서 작성 및 편집"}
+ ]}
 ];
 // Replace with a publicly shareable MYBOX URL once it is verified.
 const myboxUrl="https://naver.me/Fl2bHOua";
@@ -152,7 +165,7 @@ skillCategories.forEach(category=>{
  const heading=document.createElement("h3");heading.textContent=category.title;section.appendChild(heading);
  category.items.forEach(item=>{
   const block=document.createElement("div");block.className="skill-item";
-  const level=item.level===null?'<span class="level pending">평가 예정</span>':'<span class="level" aria-label="숙련도 '+item.level+'/5">'+Array.from({length:5},(_,i)=>'<span class="level-square'+(i<item.level?' filled':'')+'"></span>').join("")+'</span>';
+  const level=item.level===null?'<span class="level pending">평가 예정</span>':'<span class="level" aria-label="숙련도 '+item.level+'/5">'+Array.from({length:5},(_,i)=>'<span class="level-square'+(i<item.level?' filled':'')+'"></span>').join("")+'<span class="level-value" aria-hidden="true">'+item.level+'/5</span></span>';
   block.innerHTML='<div class="skill-line"><span class="skill-name">'+escapeHTML(item.name)+'</span>'+level+'</div><span class="skill-note">'+escapeHTML(item.note)+'</span>';
   section.appendChild(block);
  });skills.appendChild(section);
